@@ -1,2 +1,2 @@
 # excercise-of-C-
-C语言练习
+C语言程序练习
