@@ -17,7 +17,7 @@ int main(void)
             scanf("%d",&board[i][j]);
         }
     }
-    
+    /*
     //检查行
     for(i=0;i<size && result == -1;i++)
     {
@@ -65,6 +65,34 @@ int main(void)
             {
                 result=1;
             }
+        }
+    }
+    */
+    //使用双重循环检查行与列
+    for(i=0;i<size;i++)
+    {
+        numOfX=numOfO=0;
+        for(j=0;j<size;j++)
+        {
+            for(i=0;i<size;i++)
+            {
+                if(board[i][j]==1)
+                {
+                    numOfX++;
+                }
+                else{
+                    numOfO++;
+                }
+            }
+        }
+        if(numOfX==size){
+            result=0;
+            break;
+        }
+        else if(numOfO==size)
+        {
+            result=1;
+            break;
         }
     }
     
